@@ -1,25 +1,25 @@
 services:
-    newscoop_example_plugin.lifecyclesubscriber:
-        class: Newscoop\ExamplePluginBundle\EventListener\LifecycleSubscriber
+    newscoop_cartu_bank_pay.lifecyclesubscriber:
+        class: Newscoop\CartuBankPay\EventListener\LifecycleSubscriber
         arguments:
             - @em
         tags:
             - { name: kernel.event_subscriber}
 
-    newscoop_example_plugin.configure_menu_listener:
-        class: Newscoop\ExamplePluginBundle\EventListener\ConfigureMenuListener
+    newscoop_cartu_bank_pay.configure_menu_listener:
+        class: Newscoop\CartuBankPay\EventListener\ConfigureMenuListener
         tags:
             - { name: kernel.event_listener, event: newscoop_newscoop.menu_configure, method: onMenuConfigure }
         arguments:
             - @translator
 
-    newscoop_example_plugin.hooks.listener:
-        class:     "Newscoop\ExamplePluginBundle\EventListener\HooksListener"
+    newscoop_cartu_bank_pay.hooks.listener:
+        class:     "Newscoop\CartuBankPay\EventListener\HooksListener"
         arguments: ["@service_container"]
         tags:
             - { name: kernel.event_listener, event: newscoop_admin.interface.article.edit.sidebar, method: sidebar }
 
-    newscoop_example_plugin.list_objects.listener:
-        class: Newscoop\ExamplePluginBundle\EventListener\ListObjectsListener
+    newscoop_cartu_bank_pay.list_objects.listener:
+        class: Newscoop\CartuBankPay\EventListener\ListObjectsListener
         tags:
           - { name: kernel.event_listener, event: newscoop.listobjects.register, method: registerObjects }

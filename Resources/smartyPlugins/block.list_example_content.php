@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Newscoop\ExamplePluginBundle
+ * @package Newscoop\CartuBankPay
  * @author Paweł Mikołajczuk <pawel.mikolajczuk@sourcefabric.org>
  * @copyright 2014 Sourcefabric o.p.s.
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
@@ -25,10 +25,10 @@ function smarty_block_list_example_content($params, $content, &$smarty, &$repeat
     $paginatorService = \Zend_Registry::get('container')->get('newscoop.listpaginator.service');
 
     if (!isset($content)) { // init
-        $start = $context->next_list_start('\Newscoop\ExamplePluginBundle\TemplateList\ExampleContentList');
+        $start = $context->next_list_start('\Newscoop\CartuBankPay\TemplateList\ExampleContentList');
         // initiate list object, pass new criteria object and paginatorService
-        $list = new \Newscoop\ExamplePluginBundle\TemplateList\ExampleContentList(
-            new \Newscoop\ExamplePluginBundle\TemplateList\ExampleContentCriteria(),
+        $list = new \Newscoop\CartuBankPay\TemplateList\ExampleContentList(
+            new \Newscoop\CartuBankPay\TemplateList\ExampleContentCriteria(),
             $paginatorService
         );
 

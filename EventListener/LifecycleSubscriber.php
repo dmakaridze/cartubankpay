@@ -1,12 +1,12 @@
 <?php
 /**
- * @package Newscoop\ExamplePluginBundle
+ * @package Newscoop\CartuBankPay
  * @author Paweł Mikołajczuk <pawel.mikolajczuk@sourcefabric.org>
  * @copyright 2012 Sourcefabric o.p.s.
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace Newscoop\ExamplePluginBundle\EventListener;
+namespace Newscoop\CartuBankPay\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Newscoop\EventDispatcher\Events\GenericEvent;
@@ -50,16 +50,16 @@ class LifecycleSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            'plugin.install.newscoop_example_plugin' => array('install', 1),
-            'plugin.update.newscoop_example_plugin' => array('update', 1),
-            'plugin.remove.newscoop_example_plugin' => array('remove', 1),
+            'plugin.install.newscoop_cartu_bank_pay' => array('install', 1),
+            'plugin.update.newscoop_cartu_bank_pay' => array('update', 1),
+            'plugin.remove.newscoop_cartu_bank_pay' => array('remove', 1),
         );
     }
 
     private function getClasses()
     {
         return array(
-          $this->em->getClassMetadata('Newscoop\ExamplePluginBundle\Entity\Example'),
+          $this->em->getClassMetadata('Newscoop\CartuBankPay\Entity\Example'),
         );
     }
 }

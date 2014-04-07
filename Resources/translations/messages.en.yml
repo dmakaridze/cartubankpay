@@ -1,7 +1,7 @@
 Plugins: Plugins
 plugin:
   sidebar:
-    name: "ExamplePluginBundle"
+    name: "CartuBankPay"
     info: "This is response from plugin hook!"
   admin:
     title: "Test plugin page"

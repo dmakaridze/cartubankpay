@@ -1,12 +1,12 @@
 <?php
 /**
- * @package Newscoop\ExamplePluginBundle
+ * @package Newscoop\CartuBankPay
  * @author Paweł Mikołajczuk <pawel.mikolajczuk@sourcefabric.org>
  * @copyright 2012 Sourcefabric o.p.s.
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace Newscoop\ExamplePluginBundle\Entity;
+namespace Newscoop\CartuBankPay\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;

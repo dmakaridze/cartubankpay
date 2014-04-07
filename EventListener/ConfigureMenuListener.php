@@ -1,12 +1,12 @@
 <?php
 /**
- * @package Newscoop\ExamplePluginBundle
+ * @package Newscoop\CartuBankPay
  * @author Paweł Mikołajczuk <pawel.mikolajczuk@sourcefabric.org>
  * @copyright 2013 Sourcefabric o.p.s.
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace Newscoop\ExamplePluginBundle\EventListener;
+namespace Newscoop\CartuBankPay\EventListener;
 
 use Newscoop\NewscoopBundle\Event\ConfigureMenuEvent;
 use Symfony\Component\Translation\Translator;

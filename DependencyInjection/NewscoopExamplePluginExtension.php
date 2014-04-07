@@ -1,6 +1,6 @@
 <?php
 
-namespace Newscoop\ExamplePluginBundle\DependencyInjection;
+namespace Newscoop\CartuBankPay\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

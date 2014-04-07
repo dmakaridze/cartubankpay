@@ -1,6 +1,6 @@
 <?php
 
-namespace Newscoop\ExamplePluginBundle\Controller;
+namespace Newscoop\CartuBankPay\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -14,11 +14,11 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('NewscoopExamplePluginBundle:Default:index.html.smarty');
+        return $this->render('NewscoopCartuBankPay:Default:index.html.smarty');
     }
 
     /**
-     * @Route("/admin/example_plugin")
+     * @Route("/admin/cartu_bank_pay")
      * @Template()
      */
     public function adminAction(Request $request)

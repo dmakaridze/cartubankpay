@@ -1,12 +1,12 @@
 <?php
 /**
- * @package Newscoop\ExamplePluginBundle
+ * @package Newscoop\CartuBankPay
  * @author Paweł Mikołajczuk <pawel.mikolajczuk@sourcefabric.org>
  * @copyright 2014 Sourcefabric o.p.s.
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace Newscoop\ExamplePluginBundle\TemplateList;
+namespace Newscoop\CartuBankPay\TemplateList;
 
 use Newscoop\ListResult;
 use Newscoop\TemplateList\PaginatedBaseList;
@@ -26,7 +26,7 @@ class ExampleContentList extends PaginatedBaseList // we extend PaginatedBaseLis
         // if you don't have records in database then you can uncomment this code (it will create dummy criteria objects):
         $target = array();
         for ($i=0; $i < 20 ; $i++) {
-            $target[$i] = new \Newscoop\ExamplePluginBundle\Entity\Example();
+            $target[$i] = new \Newscoop\CartuBankPay\Entity\Example();
             $target[$i]->setName('Name for '.$i.' example');
             $target[$i]->setDescription('Description for '.$i.' example');
             $target[$i]->getCreatedAt(new \DateTime());
@@ -43,14 +43,14 @@ class ExampleContentList extends PaginatedBaseList // we extend PaginatedBaseLis
      *
      * You can place this method also in Entity Repository.
      *
-     * @param Newscoop\ExamplePluginBundle\TemplateList\ExampleContentCriteria $criteria
+     * @param Newscoop\CartuBankPay\TemplateList\ExampleContentCriteria $criteria
      *
      * @return Newscoop\ListResult
      */
     private function getListByCriteria(ExampleContentCriteria $criteria)
     {
         $em = \Zend_Registry::get('container')->get('em');
-        $qb = $em->getRepository('Newscoop\ExamplePluginBundle\Entity\Example')
+        $qb = $em->getRepository('Newscoop\CartuBankPay\Entity\Example')
             ->createQueryBuilder('e');
 
         // use processed by list constraints from list block (template)
@@ -60,7 +60,7 @@ class ExampleContentList extends PaginatedBaseList // we extend PaginatedBaseLis
         }
 
         // use processed by list order definitions from list block (template)
-        $metadata = $em->getClassMetadata('Newscoop\ExamplePluginBundle\Entity\Example');
+        $metadata = $em->getClassMetadata('Newscoop\CartuBankPay\Entity\Example');
         foreach ($criteria->orderBy as $key => $order) {
             if (array_key_exists($key, $metadata->columnNames)) {
                 $key = 'e.' . $key;

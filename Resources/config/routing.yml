@@ -1,4 +1,4 @@
-newscoop_example_plugin:
-    resource: "@NewscoopExamplePluginBundle/Controller/DefaultController.php"
+newscoop_cartu_bank_pay:
+    resource: "@NewscoopCartuBankPay/Controller/DefaultController.php"
     type:     annotation
     prefix:   /
